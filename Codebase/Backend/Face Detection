@@ -1,0 +1,37 @@
+import cv2
+import face_recognition
+
+# Load the video file
+cap = cv2.VideoCapture('C:/Users/asus/OneDrive/Desktop/Mini Project/Test Subjects/ArdraAshok.mp4')
+
+if not cap.isOpened():
+    print("Error: Could not open video.")
+    exit()
+
+# Loop through frames
+while True:
+    ret, frame = cap.read()
+
+    if not ret:
+        print("Reached the end of the video or cannot retrieve frame.")
+        break
+
+    # Convert the image from BGR to RGB
+    rgb_frame = frame[:, :, ::-1]
+
+    # Detect faces in the frame
+    face_locations = face_recognition.face_locations(rgb_frame)
+
+    # Draw a rectangle around each face
+    for (top, right, bottom, left) in face_locations:
+        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 255), 2)
+
+    # Display the frame
+    cv2.imshow('Video', frame)
+
+    if cv2.waitKey(100) & 0xFF == 13:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+
