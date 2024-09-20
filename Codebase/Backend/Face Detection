@@ -2,7 +2,7 @@ import cv2
 import face_recognition
 
 # Load the video file
-cap = cv2.VideoCapture('C:/Users/asus/OneDrive/Desktop/Mini Project/Test Subjects/ArdraAshok.mp4')
+cap = cv2.VideoCapture('C:/Users/asus/OneDrive/Desktop/Mini Project/Test Subjects/Example.mp4')
 
 if not cap.isOpened():
     print("Error: Could not open video.")
