@@ -2,7 +2,7 @@ from ultralytics import YOLO
 import cv2
 model = YOLO('yolov8n.pt')
 # Path to your downloaded video
-video_path = r"C:\Users\Asus\Downloads\4835636-hd_1920_1080_30fps.mp4"
+video_path = r"C:\Users\Asus\Downloads\TEST 3.mp4"
 
 # Load the video
 video = cv2.VideoCapture(video_path)
