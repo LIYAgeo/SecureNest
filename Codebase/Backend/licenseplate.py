@@ -1,3 +1,10 @@
+!pip install ultralytics
+!pip install roboflow
+!pip install easyocr
+!pip install opencv-python-headless  # Use headless for environments like Colab where display is not needed
+!pip install pandas
+!pip install numpy
+
 import cv2
 from ultralytics import YOLO
 import easyocr
