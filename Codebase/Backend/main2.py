@@ -153,6 +153,8 @@ class FaceRecognizer:
                 existing_encodings = cursor.fetchall()
 
                 for (stored_encoding_blob,) in existing_encodings:
+                    if stored_encoding_blob is None:
+                        continue 
                     stored_encoding = np.frombuffer(stored_encoding_blob, dtype=np.float32)
                     similarity = cosine_similarity([embedding], [stored_encoding])[0, 0]
                     if similarity > self.similarity_threshold:
