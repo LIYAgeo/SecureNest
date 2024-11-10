@@ -45,8 +45,8 @@ def init_db():
 
 # Email Alert Function
 def send_email_alert(entry_type, identifier, confidence):
-    sender_email = "ridaabdulraouf@gmail.com"
-    receiver_email = "u2209054@rajagiri.edu.in"
+    sender_email = "aaaaaaaa@gmail.com"
+    receiver_email = "aaaaaaaaaa@rajagiri.edu.in"
     subject = f"Alert: New {entry_type} Entry"
     body = f"A new {entry_type} entry has been logged:\n\nIdentifier: {identifier}\nConfidence: {confidence}"
 
@@ -57,7 +57,7 @@ def send_email_alert(entry_type, identifier, confidence):
     msg.attach(MIMEText(body, 'plain'))
 
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
-        server.login(sender_email, "vtds gurw bkem pigb")
+        server.login(sender_email, "password")
         server.sendmail(sender_email, receiver_email, msg.as_string())
     print("Email alert sent.")
 
