@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts - SecureNest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff; /* Consistent white background */
+        }
+        .alerts-container {
+            width: 375px; /* Standard mobile screen width */
+            height: 667px; /* Standard mobile screen height */
+            border: 16px solid black;
+            padding: 20px;
+            background-color: #333; /* Dark background for contrast */
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            overflow-y: auto; /* Allows scrolling if content exceeds container height */
+        }
+        h1 {
+            margin-bottom: 20px; /* Space between title and alert sections */
+            color: #fff; /* White color for contrast */
+        }
+        .alert-section {
+            width: 90%; /* Slightly less than container width */
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px; /* Rounded edges */
+            color: #fff; /* Text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center aligns the content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds depth with a shadow */
+        }
+        .critical-alert {
+            background-color: #FF4C4C; /* Vivid red for critical alerts */
+        }
+        .suspicious-alert {
+            background-color: #FFA500; /* Bright orange for suspicious alerts */
+        }
+        .normal-alert {
+            background-color: #4CAF50; /* Calm green for normal status */
+        }
+        .alert-title {
+            font-weight: bold; /* Bolder font for titles */
+            margin-bottom: 5px; /* Space between title and description */
+        }
+        .alert-description {
+            font-size: 0.9rem; /* Slightly smaller font for descriptions */
+        }
+    </style>
+</head>
+<body>
+<div class="alerts-container">
+    <h1>Alerts</h1>
+    <!-- Critical Alerts Section -->
+    <div class="alert-section critical-alert">
+        <div class="alert-title">Critical Alerts</div>
+        <div class="alert-description">
+            View critical alerts
+        </div>
+    </div>
+    <!-- Suspicious Alerts Section -->
+    <div class="alert-section suspicious-alert">
+        <div class="alert-title">Suspicious Alerts</div>
+        <div class="alert-description">
+            View suspicious alerts
+        </div>
+    </div>
+    <!-- Normal Alerts Section -->
+    <div class="alert-section normal-alert">
+        <div class="alert-title">Normal Alerts</div>
+        <div class="alert-description">
+            View normal alerts
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
