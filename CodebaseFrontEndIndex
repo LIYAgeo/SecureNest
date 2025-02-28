@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SecureNest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+        }
+        .container {
+            width: 375px;
+            height: 667px;
+            border: 16px solid black;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .logo {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px; /* Space between the logo and the text */
+        }
+        .logo img {
+            width: 60%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin-top: 40px; /* Moves the text further down */
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        a.login-button {
+            margin-top: 20px; /* Adds space above the button */
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        a.login-button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='SecureNestLogo.png') }}" alt="SecureNest Logo">
+    </div>
+    <h1>Welcome to SecureNest</h1>
+    <p>Your one-stop portal for all your security needs.</p>
+    <a href="/login" class="login-button">Login</a>
+</div>
+</body>
+</html>
