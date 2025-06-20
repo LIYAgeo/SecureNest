@@ -19,3 +19,4 @@ SecureNest captures and verifies faces using a trained model and grants access o
 | Interface         | HTML, CSS                                                |
 | Dataset           | Custom image dataset of authorized users                |
 | Hardware (tested) | Webcam or USB camera                                     |
+
